@@ -12,9 +12,9 @@ namespace MongoCRUD.Models.Repository
 
         public EmployeeRepository()
         {
-            _mongoClient = new MongoClient("mongodb://127.0.0.1:27017");
-            _database = _mongoClient.GetDatabase("EmployeeDemo");
-            _employeeTable = _database.GetCollection<Employee>("Employee");
+            _mongoClient = new MongoClient("your mongo connection id");//i.emongodb://127.0.0.1:27017
+            _database = _mongoClient.GetDatabase("");//YOur db name in mongo i.e EmployeeDemo
+            _employeeTable = _database.GetCollection<Employee>("");//The collection you want to get. i.e Employee
 
         }
         public string Delete(string id)
